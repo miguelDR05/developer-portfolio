@@ -1,0 +1,29 @@
+---
+import type { Project } from '../interfaces/Project';
+// projects: recibe prop "projects" (array) desde la página
+const { projects } = Astro.props;
+---
+<section id="proyectos" class="section projects">
+  <h2>Proyectos Destacados</h2>
+
+  <div class="projects-grid">
+    {projects.map((p:Project) => (
+      <article class="project-card" data-id={p.id}>
+        <img src={p.image} alt={p.title} class="project-thumb" />
+        <div class="project-body">
+          <h3>{p.title}</h3>
+          <p class="project-desc">{p.description}</p>
+          <p class="project-stack">{p.stack.join(' · ')}</p>
+          <div class="project-links">
+            {p.demo ? <a class="link" href={p.demo} target="_blank" rel="noopener">Ver Demo</a> : null}
+            {p.github ? <a class="link" href={p.github} target="_blank" rel="noopener">Ver Código</a> : null}
+          </div>
+        </div>
+      </article>
+    ))}
+  </div>
+
+  <div class="more">
+    <a class="btn" href="/projects">Ver todos los proyectos</a>
+  </div>
+</section>
