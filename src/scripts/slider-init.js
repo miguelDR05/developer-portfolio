@@ -5,11 +5,14 @@ import 'tiny-slider/dist/tiny-slider.css';
 
 export function initSlider() {
   try {
-    // Esperar un tick para que DOM esté listo si es necesario
+    console.log('initSlider: cargado');
     const container = document.querySelector('.my-slider');
-    if (!container) return;
+    if (!container) {
+      console.warn('initSlider: No se encontró .my-slider en el DOM.');
+      return;
+    }
 
-    // wrap slides automatically if items are direct children (tiny-slider espera nodos)
+    // Inicializa tiny-slider
     tns({
       container: '.my-slider',
       items: 1,
@@ -26,6 +29,8 @@ export function initSlider() {
       },
       controlsText: ['◀', '▶']
     });
+
+    console.log('initSlider: inicializado correctamente');
   } catch (err) {
     console.error('Error inicializando tiny-slider:', err);
   }

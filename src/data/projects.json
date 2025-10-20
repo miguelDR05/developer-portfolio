@@ -16,5 +16,42 @@
     "github": "https://github.com/miguelDR05/developer-portfolio",
     "demo": "",
     "image": "src/assets/images/projects/developer-portfolio.jpg"
+  },
+  {
+    "id": "p3",
+    "title": "Gestor de Inventarios",
+    "description": "Aplicación web para administración de stock y reportes en tiempo real. Soluciona el control manual y pérdidas por desorden de inventario.",
+    "stack": ["Laravel", "Vue.js", "MySQL"],
+    "github": "https://github.com/miguelDR05/inventory-manager",
+    "demo": "",
+    "image": "src/assets/images/projects/inventory-manager.jpg"
+  },
+  {
+    "id": "p4",
+    "title": "Portfolio Personal (Astro)",
+    "description": "Sitio estático optimizado con Astro para mostrar proyectos, experiencia y contacto.",
+    "stack": ["Astro", "JavaScript", "CSS"],
+    "github": "https://github.com/miguelDR05/developer-portfolio",
+    "demo": "",
+    "image": "src/assets/images/projects/developer-portfolio.jpg"
+  },
+  {
+    "id": "p5",
+    "title": "Gestor de Inventarios",
+    "description": "Aplicación web para administración de stock y reportes en tiempo real. Soluciona el control manual y pérdidas por desorden de inventario.",
+    "stack": ["Laravel", "Vue.js", "MySQL"],
+    "github": "https://github.com/miguelDR05/inventory-manager",
+    "demo": "",
+    "image": "src/assets/images/projects/inventory-manager.jpg"
+  },
+  {
+    "id": "p6",
+    "title": "Portfolio Personal (Astro)",
+    "description": "Sitio estático optimizado con Astro para mostrar proyectos, experiencia y contacto.",
+    "stack": ["Astro", "JavaScript", "CSS"],
+    "github": "https://github.com/miguelDR05/developer-portfolio",
+    "demo": "",
+    "image": "src/assets/images/projects/developer-portfolio.jpg"
   }
+
 ]

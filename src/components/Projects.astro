@@ -30,7 +30,7 @@ const { projects = [] } = Astro.props;
 
 <!-- Inicialización: el script importa desde src/scripts/slider-init.js -->
 <script type="module">
-  import { initSlider } from '../scripts/slider-init.js';
+  import { initSlider } from '/src/scripts/slider-init.js';
   if (typeof window !== 'undefined') {
     document.addEventListener('DOMContentLoaded', () => {
       console.log('Projects component: DOMContentLoaded -> initSlider()');
