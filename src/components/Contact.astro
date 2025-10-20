@@ -1,25 +1,29 @@
 ---
-// Sección contacto simple (formulario estático que envía a tu email con un servicio externo)
 ---
-<section id="contacto" class="section contact">
-  <h2>¿Trabajamos juntos?</h2>
-  <p>Estoy disponible para oportunidades freelance o roles full-time. Si tienes un proyecto en mente o quieres saludar, ¡escríbeme!</p>
+<div class="rounded-xl card-bg p-6 md:p-8">
+  <h2 class="text-2xl font-bold">¿Trabajamos juntos?</h2>
+  <p class="text-[var(--muted)] mt-2">Estoy disponible para oportunidades freelance o roles full-time. Si tienes un proyecto en mente o quieres saludar, ¡escríbeme!</p>
 
-  <form class="contact-form" action="https://formspree.io/f/tu-endpoint" method="POST">
-    <label>
-      <span>Nombre</span>
-      <input name="name" type="text" required />
+  <form class="mt-6 grid gap-3 max-w-xl" action="https://formspree.io/f/tu-endpoint" method="POST">
+    <label class="flex flex-col text-[var(--muted)]">
+      Nombre
+      <input class="mt-1 p-2 rounded-md bg-transparent border border-white/5 text-white" type="text" name="name" required />
     </label>
-    <label>
-      <span>Email</span>
-      <input name="email" type="email" required />
+
+    <label class="flex flex-col text-[var(--muted)]">
+      Email
+      <input class="mt-1 p-2 rounded-md bg-transparent border border-white/5 text-white" type="email" name="email" required />
     </label>
-    <label>
-      <span>Mensaje</span>
-      <textarea name="message" rows="5" required></textarea>
+
+    <label class="flex flex-col text-[var(--muted)]">
+      Mensaje
+      <textarea class="mt-1 p-2 rounded-md bg-transparent border border-white/5 text-white" rows="5" name="message" required></textarea>
     </label>
-    <button class="btn primary" type="submit">Enviar mensaje</button>
+
+    <div>
+      <button class="px-4 py-2 rounded-md bg-primary text-slate-900 font-semibold">Enviar mensaje</button>
+    </div>
   </form>
 
-  <p class="alt-contact">O escríbeme directamente a: <a href="mailto:tu-email@ejemplo.com">tu-email@ejemplo.com</a></p>
-</section>
+  <p class="text-[var(--muted)] mt-4">O escríbeme directamente a: <a class="text-primary" href="mailto:tu-email@ejemplo.com">tu-email@ejemplo.com</a></p>
+</div>

@@ -1,0 +1,10 @@
+[
+  { "id": "s1", "name": "HTML5", "icon": "/images/skills/html5.svg" },
+  { "id": "s2", "name": "CSS3", "icon": "/images/skills/css3.svg" },
+  { "id": "s3", "name": "JavaScript", "icon": "/images/skills/javascript.svg" },
+  { "id": "s4", "name": "Vue.js", "icon": "/images/skills/vue.svg" },
+  { "id": "s5", "name": "Laravel", "icon": "/images/skills/laravel.svg" },
+  { "id": "s6", "name": "Python", "icon": "/images/skills/python.svg" },
+  { "id": "s7", "name": "PostgreSQL", "icon": "/images/skills/postgresql.svg" },
+  { "id": "s8", "name": "Django", "icon": "/images/skills/django.svg" }
+]
