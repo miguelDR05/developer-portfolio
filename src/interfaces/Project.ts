@@ -1,4 +1,3 @@
-// crear una interfaz para Project
 export interface Project {
   id: number;
   title: string;

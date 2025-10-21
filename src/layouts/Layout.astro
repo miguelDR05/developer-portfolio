@@ -1,9 +1,9 @@
 ---
-import '../styles/tailwind.css';
+import '../styles/global.css';
 const { title = 'Portafolio — Segundo Miguel Delgado Ruiz' } = Astro.props;
 ---
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
@@ -15,4 +15,5 @@ const { title = 'Portafolio — Segundo Miguel Delgado Ruiz' } = Astro.props;
 	<body>
 		<slot />
 	</body>
+	<script type="module" src="/src/scripts/main.js"></script>
 </html>

@@ -1,0 +1,27 @@
+[
+  {
+    "id": "inicio",
+    "href": "#inicio",
+    "title": "Inicio"
+  },
+  {
+    "id": "sobre-mi",
+    "href": "#sobre-mi",
+    "title": "Acerca de mí"
+  },
+  {
+    "id": "habilidades",
+    "href": "#habilidades",
+    "title": "Habilidades"
+  },
+  {
+    "id": "proyectos",
+    "href": "#proyectos",
+    "title": "Proyectos"
+  },
+  {
+    "id": "contacto",
+    "href": "#contacto",
+    "title": "Contacto"
+  }
+]
