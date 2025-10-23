@@ -28,24 +28,54 @@
 }
 html,
 body {
-  /* height: 100%; */
-  margin: 0;
-  background: linear-gradient(180deg, #071028 0%, #071a2a 100%);
-  /* color: var(--text); */
+  /* background-color: var(--color-dark-blue); */
+  /* color: white; */
 }
 
 /* Container */
-.main-container {
-  max-width: 1120px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
 .container {
   max-width: var(--container);
   margin: 0 auto;
   padding: 40px 20px;
+}
+
+/* Estilos generales de secciones */
+.scroll-section {
+  padding-top: 80px; /* Espacio para el header fijo */
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  /* text-align: center; */
+  position: relative;
+  overflow: hidden; /* Para las imágenes de fondo */
+}
+
+/* Estilo para la imagen de fondo de Inicio */
+.section-inicio {
+  background-size: cover;
+  background-position: center;
+  transition: background-image 1s ease-in-out;
+  /* Placeholder para la imagen de fondo */
+  background-image: url("src/assets/images/background-inicio.jpg");
+}
+
+/* Overlay para la imagen de fondo */
+.section-inicio::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(18, 39, 75, 0.7); /* color-dark-blue con opacidad */
+  z-index: 1;
+}
+
+.section-inicio > * {
+  position: relative;
+  z-index: 2;
 }
 
 /* Card background */
@@ -55,30 +85,6 @@ body {
 }
 
 /* Hero */
-.hero {
-  padding: 80px 0;
-  text-align: center;
-}
-.hero-inner {
-  max-width: 900px;
-  margin: 0 auto;
-}
-.hero h1 {
-  font-size: 2.2rem;
-  margin: 0 0 8px;
-}
-.subtitle {
-  color: var(--accent);
-  font-weight: 600;
-  margin-bottom: 8px;
-}
-.tagline {
-  color: var(--muted);
-  margin-bottom: 18px;
-}
-.hero-cta .btn {
-  margin: 6px;
-}
 
 /* Buttons */
 .btn {
@@ -185,5 +191,3 @@ body {
 /* Footer */
 
 /* Responsive */
-
-

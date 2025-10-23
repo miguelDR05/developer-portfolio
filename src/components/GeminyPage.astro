@@ -1,0 +1,441 @@
+---
+import "../styles/global.css";
+---
+
+<!doctype html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi Portafolio</title>
+    <style>
+      /* Pequeños ajustes y clases personalizadas si fueran necesarias */
+      /* La clase 'nav-active' se agregará/quitará con JavaScript */
+      .nav-active {
+        color: #38bdf8; /* text-sky-400 */
+        font-weight: 600; /* semibold */
+        border-bottom: 2px solid #38bdf8;
+      }
+
+      /* Estilo para el botón de generar deshabilitado */
+      #generar-mensaje-btn:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-900 text-white font-sans">
+    <!-- BARRA DE NAVEGACIÓN FIJA -->
+    <header
+      id="main-header"
+      class="fixed top-0 left-0 w-full bg-gray-900/90 backdrop-blur-sm shadow-md z-50 transition-all duration-300"
+    >
+      <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <!-- Logo o Nombre -->
+          <div>
+            <a
+              href="#inicio"
+              class="text-2xl font-bold text-white hover:text-sky-400 transition"
+              >MiLogo</a
+            >
+          </div>
+
+          <!-- Navegación Principal -->
+          <div class="hidden sm:flex sm:space-x-8">
+            <a
+              href="#inicio"
+              class="nav-link text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-300"
+            >
+              Inicio
+            </a>
+            <a
+              href="#sobre-mi"
+              class="nav-link text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-300"
+            >
+              Sobre Mí
+            </a>
+            <a
+              href="#proyectos"
+              class="nav-link text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-300"
+            >
+              Proyectos
+            </a>
+            <a
+              href="#contacto"
+              class="nav-link text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-300"
+            >
+              Contacto
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+      <!-- SECCIÓN: INICIO -->
+      <section
+        id="inicio"
+        class="scroll-section min-h-screen flex items-center justify-center pt-16 bg-gray-900"
+      >
+        <div class="text-center">
+          <h1
+            class="text-4xl sm:text-6xl font-extrabold text-white leading-tight"
+          >
+            Hola, soy [Tu Nombre]
+          </h1>
+          <p class="mt-4 text-xl text-gray-300">
+            Desarrollador Web | Diseñador | Creador
+          </p>
+          <a
+            href="#proyectos"
+            class="mt-8 inline-block bg-sky-500 hover:bg-sky-600 text-white font-bold py-3 px-6 rounded-lg shadow-lg transition duration-300"
+          >
+            Ver mis Proyectos
+          </a>
+        </div>
+      </section>
+
+      <!-- SECCIÓN: SOBRE MÍ -->
+      <section
+        id="sobre-mi"
+        class="scroll-section min-h-screen flex items-center justify-center pt-16 bg-gray-800"
+      >
+        <div class="max-w-4xl mx-auto px-4 text-center">
+          <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">
+            Sobre Mí
+          </h2>
+          <p class="text-lg text-gray-300 leading-relaxed">
+            Aquí puedes escribir una breve biografía sobre ti, tus pasiones, tu
+            experiencia y las tecnologías con las que te gusta trabajar. El
+            objetivo es dar una visión rápida de quién eres como profesional.
+          </p>
+          <!-- Puedes añadir más contenido, como habilidades o experiencia -->
+        </div>
+      </section>
+
+      <!-- SECCIÓN: PROYECTOS -->
+      <section
+        id="proyectos"
+        class="scroll-section min-h-screen flex items-center justify-center pt-16 bg-gray-900"
+      >
+        <div class="max-w-6xl mx-auto px-4 text-center">
+          <h2 class="text-3xl sm:text-4xl font-bold text-white mb-12">
+            Mis Proyectos
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Proyecto 1 -->
+            <div
+              class="bg-gray-800 rounded-lg shadow-xl overflow-hidden transform hover:scale-105 transition duration-300"
+            >
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-white mb-2">
+                  Nombre del Proyecto 1
+                </h3>
+                <p class="text-gray-400 mb-4">
+                  Breve descripción del proyecto y las tecnologías usadas.
+                </p>
+                <a href="#" class="text-sky-400 hover:text-sky-300 font-medium"
+                  >Ver más &rarr;</a
+                >
+              </div>
+            </div>
+            <!-- Proyecto 2 -->
+            <div
+              class="bg-gray-800 rounded-lg shadow-xl overflow-hidden transform hover:scale-105 transition duration-300"
+            >
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-white mb-2">
+                  Nombre del Proyecto 2
+                </h3>
+                <p class="text-gray-400 mb-4">
+                  Breve descripción del proyecto y las tecnologías usadas.
+                </p>
+                <a href="#" class="text-sky-400 hover:text-sky-300 font-medium"
+                  >Ver más &rarr;</a
+                >
+              </div>
+            </div>
+            <!-- Proyecto 3 -->
+            <div
+              class="bg-gray-800 rounded-lg shadow-xl overflow-hidden transform hover:scale-105 transition duration-300"
+            >
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-white mb-2">
+                  Nombre del Proyecto 3
+                </h3>
+                <p class="text-gray-400 mb-4">
+                  Breve descripción del proyecto y las tecnologías usadas.
+                </p>
+                <a href="#" class="text-sky-400 hover:text-sky-300 font-medium"
+                  >Ver más &rarr;</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECCIÓN: CONTACTO -->
+      <section
+        id="contacto"
+        class="scroll-section min-h-screen flex items-center justify-center pt-16 bg-gray-800"
+      >
+        <div class="max-w-lg mx-auto px-4 text-center w-full">
+          <h2 class="text-3xl sm:text-4xl font-bold text-white mb-8">
+            Contacto
+          </h2>
+          <p class="text-lg text-gray-300 mb-8">
+            ¿Interesado en trabajar juntos? ¡Envíame un mensaje!
+          </p>
+          <form id="contact-form" class="space-y-6">
+            <div>
+              <input
+                type="text"
+                placeholder="Tu Nombre"
+                name="name"
+                required
+                class="w-full px-4 py-3 bg-gray-700 text-white rounded-lg border border-gray-600 focus:outline-none focus:border-sky-500 transition"
+              />
+            </div>
+            <div>
+              <input
+                type="email"
+                placeholder="Tu Email"
+                name="email"
+                required
+                class="w-full px-4 py-3 bg-gray-700 text-white rounded-lg border border-gray-600 focus:outline-none focus:border-sky-500 transition"
+              />
+            </div>
+
+            <!-- INICIO: Integración Gemini API -->
+            <div>
+              <label
+                for="mensaje-prompt"
+                class="block text-sm font-medium text-gray-300 mb-2 text-left"
+                >¿Ayuda para redactar? (ej: "Ofrecer un trabajo frontend")</label
+              >
+              <div class="flex flex-col sm:flex-row gap-2">
+                <input
+                  type="text"
+                  id="mensaje-prompt"
+                  placeholder="Describe tu intención..."
+                  class="flex-grow px-4 py-3 bg-gray-700 text-white rounded-lg border border-gray-600 focus:outline-none focus:border-sky-500 transition"
+                />
+                <button
+                  type="button"
+                  id="generar-mensaje-btn"
+                  class="bg-sky-600 hover:bg-sky-700 text-white font-bold py-3 px-4 rounded-lg shadow-lg transition duration-300 w-full sm:w-auto"
+                >
+                  ✨ Generar
+                </button>
+              </div>
+              <p
+                id="gemini-loading"
+                class="text-sky-400 text-sm mt-2 text-left hidden"
+              >
+                Generando borrador...
+              </p>
+            </div>
+            <!-- FIN: Integración Gemini API -->
+
+            <div>
+              <textarea
+                id="mensaje-contacto"
+                placeholder="Tu Mensaje"
+                name="message"
+                rows="5"
+                required
+                class="w-full px-4 py-3 bg-gray-700 text-white rounded-lg border border-gray-600 focus:outline-none focus:border-sky-500 transition"
+              ></textarea>
+            </div>
+            <div>
+              <button
+                type="submit"
+                class="w-full bg-sky-500 hover:bg-sky-600 text-white font-bold py-3 px-6 rounded-lg shadow-lg transition duration-300"
+              >
+                Enviar Mensaje
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-gray-900 py-8 text-center">
+      <p class="text-gray-400">
+        &copy; 2025 [Tu Nombre]. Todos los derechos reservados.
+      </p>
+    </footer>
+
+    <!-- SCRIPT PARA EL SCROLL-SPY Y GEMINI -->
+    <script type="module">
+      document.addEventListener("DOMContentLoaded", () => {
+        // --- Lógica de Scroll-Spy ---
+        const sections = document.querySelectorAll(".scroll-section");
+        const navLinks = document.querySelectorAll("nav a.nav-link");
+        const header = document.getElementById("main-header");
+
+        const getHeaderOffset = () => {
+          return header ? header.offsetHeight + 20 : 80;
+        };
+
+        const onScroll = () => {
+          const scrollPos = window.scrollY;
+          const headerOffset = getHeaderOffset();
+          let currentSectionId = null;
+
+          for (let i = sections.length - 1; i >= 0; i--) {
+            const section = sections[i];
+            const sectionTop = section.offsetTop - headerOffset;
+            if (scrollPos >= sectionTop) {
+              currentSectionId = section.id;
+              break;
+            }
+          }
+
+          if (
+            currentSectionId === null &&
+            sections.length > 0 &&
+            scrollPos < sections[0].offsetTop
+          ) {
+            currentSectionId = sections[0].id;
+          }
+
+          navLinks.forEach((link) => {
+            const linkId = link.getAttribute("href").substring(1);
+            if (linkId === currentSectionId) {
+              link.classList.add("nav-active");
+            } else {
+              link.classList.remove("nav-active");
+            }
+          });
+        };
+
+        window.addEventListener("scroll", onScroll);
+        onScroll(); // Ejecutar al cargar
+
+        // --- INICIO: Funcionalidad Gemini API ---
+        const generarBtn = document.getElementById("generar-mensaje-btn");
+        const promptInput = document.getElementById("mensaje-prompt");
+        const mensajeTextarea = document.getElementById("mensaje-contacto");
+        const loadingText = document.getElementById("gemini-loading");
+
+        const apiKey = ""; // Dejar vacío, se proveerá en el entorno
+        const apiUrl = `https://generativanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
+
+        // Helper para sleep
+        const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+        // Función fetch con reintentos y backoff exponencial
+        async function fetchWithBackoff(
+          url,
+          options,
+          retries = 5,
+          delay = 1000
+        ) {
+          for (let i = 0; i < retries; i++) {
+            try {
+              const response = await fetch(url, options);
+              if (response.ok) {
+                return response.json();
+              }
+              if (response.status === 429 || response.status >= 500) {
+                console.warn(
+                  `Intento ${i + 1} fallido (Status: ${response.status}). Reintentando en ${delay}ms...`
+                );
+                await sleep(delay);
+                delay *= 2; // Incrementar el delay
+              } else {
+                console.error(
+                  "Error en la solicitud (no se reintentará):",
+                  response.status,
+                  response.statusText
+                );
+                const errorResult = await response.json();
+                console.error("Detalle del error:", errorResult);
+                return null;
+              }
+            } catch (error) {
+              console.warn(
+                `Intento ${i + 1} fallido (Error de red). Reintentando en ${delay}ms...`,
+                error
+              );
+              await sleep(delay);
+              delay *= 2;
+            }
+          }
+          console.error(
+            "No se pudo completar la solicitud después de",
+            retries,
+            "intentos."
+          );
+          return null;
+        }
+
+        // Función para llamar a la API de Gemini
+        async function callGemini(prompt) {
+          const systemPrompt = `Eres un asistente profesional y amigable. Ayuda al usuario a redactar un mensaje de contacto claro, conciso y profesional para el dueño de este portafolio. El tono debe ser respetuoso y directo. Responde únicamente con el cuerpo del mensaje sugerido, sin preámbulos como 'Aquí tienes:' o 'Espero que esto sirva:'.`;
+
+          const payload = {
+            contents: [{ parts: [{ text: prompt }] }],
+            systemInstruction: {
+              parts: [{ text: systemPrompt }],
+            },
+          };
+
+          const options = {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(payload),
+          };
+
+          const result = await fetchWithBackoff(apiUrl, options);
+
+          if (
+            result &&
+            result.candidates &&
+            result.candidates[0].content.parts[0].text
+          ) {
+            return result.candidates[0].content.parts[0].text;
+          } else {
+            console.error("Respuesta inesperada de la API:", result);
+            return "Hubo un error al generar el mensaje. Por favor, inténtalo de nuevo.";
+          }
+        }
+
+        // Event listener para el botón de generar
+        generarBtn.addEventListener("click", async () => {
+          const prompt = promptInput.value;
+          if (!prompt.trim()) {
+            promptInput.focus();
+            return;
+          }
+
+          // Mostrar estado de carga
+          loadingText.classList.remove("hidden");
+          generarBtn.disabled = true;
+          generarBtn.textContent = "Generando...";
+
+          try {
+            const draft = await callGemini(prompt);
+            mensajeTextarea.value = draft.trim();
+            mensajeTextarea.focus(); // Poner el foco en el textarea
+          } catch (error) {
+            console.error("Error al llamar a Gemini:", error);
+            mensajeTextarea.value =
+              "Error al conectar con el servicio. Intenta de nuevo.";
+          } finally {
+            // Ocultar estado de carga
+            loadingText.classList.add("hidden");
+            generarBtn.disabled = false;
+            generarBtn.innerHTML = "✨ Generar";
+          }
+        });
+
+        // --- FIN: Funcionalidad Gemini API ---
+      }); // Cierre del DOMContentLoaded
+    </script>
+  </body>
+</html>

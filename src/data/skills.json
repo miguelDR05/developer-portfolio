@@ -1,10 +1,34 @@
 [
   { "id": "s1", "name": "HTML5", "icon": "src/assets/images/skills/html5.svg" },
   { "id": "s2", "name": "CSS3", "icon": "src/assets/images/skills/css3.svg" },
-  { "id": "s3", "name": "JavaScript", "icon": "src/assets/images/skills/javascript.svg" },
-  { "id": "s4", "name": "Vue.js", "icon": "src/assets/images/skills/vuejs.svg" },
-  { "id": "s5", "name": "Laravel", "icon": "src/assets/images/skills/laravel.svg" },
-  { "id": "s6", "name": "Python", "icon": "src/assets/images/skills/python.svg" },
-  { "id": "s7", "name": "PostgreSQL", "icon": "src/assets/images/skills/postgresql.svg" },
-  { "id": "s8", "name": "Django", "icon": "src/assets/images/skills/django.svg" }
+  {
+    "id": "s3",
+    "name": "JavaScript",
+    "icon": "src/assets/images/skills/javascript.svg"
+  },
+  {
+    "id": "s4",
+    "name": "Vue.js",
+    "icon": "src/assets/images/skills/vuejs.svg"
+  },
+  {
+    "id": "s5",
+    "name": "Laravel",
+    "icon": "src/assets/images/skills/laravel.svg"
+  },
+  {
+    "id": "s6",
+    "name": "Python",
+    "icon": "src/assets/images/skills/python.svg"
+  },
+  {
+    "id": "s7",
+    "name": "PostgreSQL",
+    "icon": "src/assets/images/skills/postgresql.svg"
+  },
+  {
+    "id": "s8",
+    "name": "Django",
+    "icon": "src/assets/images/skills/django.svg"
+  }
 ]

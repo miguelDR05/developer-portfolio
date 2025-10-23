@@ -1,2 +1,2 @@
-// src/scripts/main.js
+import "../styles/global.css";
 import 'flowbite';

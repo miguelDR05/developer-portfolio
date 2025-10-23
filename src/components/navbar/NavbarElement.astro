@@ -9,14 +9,14 @@ const { href, title, current } = Astro.props as Menu;
     href={href}
     class:list={{
       // clases base siempre presentes
-      "block py-2 px-3 rounded-sm md:p-0": true,
+      "nav-link block py-2 px-3 rounded-sm lg:p-0": true,
 
       // estilos cuando está activo
-      "text-white bg-blue-700 md:bg-transparent md:text-blue-700 md:dark:text-blue-500":
+      "text-white bg-blue-700 lg:bg-transparent lg:text-blue-700 lg:dark:text-blue-500":
         current,
 
       // estilos cuando NO está activo
-      "text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent":
+      "text-gray-900 hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-blue-700 dark:text-white lg:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent":
         !current,
     }}
     aria-current={current ? "page" : undefined}>{title}</a
