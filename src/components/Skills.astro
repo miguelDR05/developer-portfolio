@@ -1,229 +1,33 @@
 ---
-const { skills = [] } = Astro.props;
+import TitleSection from "@components/TitleSection.astro";
+import Code from "@components/icons/Code.astro";
+import SkillCard from "@components/SkillCard.astro";
+import type { Skill } from "@interfaces/Skill";
+
+const { skills = [] } = Astro.props as { skills: Array<Skill> };
 ---
 
-<!-- <div id="habilidades" class="mt-20">
-  <h2 class="text-2xl font-bold text-center">Mis habilidades</h2>
-  <div
-    class="mt-8 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 justify-items-center"
-  >
-    {
-      skills.map((skill: any) => (
-        <div
-          data-id={skill.id}
-          class="w-36 h-36 flex flex-col items-center justify-center card-bg rounded-xl transform transition hover:-translate-y-2"
-        >
-          <img
-            src={skill.icon}
-            alt={skill.name}
-            width="100"
-            height="70"
-            class="w-14 h-14 object-contain mb-3"
+<section
+  id="habilidades"
+  class="scroll-section px-4 md:px-8 w-full mx-auto container lg:max-w-4xl md:max-w-2xl"
+>
+  <div class="">
+    <TitleSection> <Code /> Mis Habilidades </TitleSection>
+    <div
+      class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6"
+    >
+      {
+        skills.map((skill: any) => (
+          <SkillCard
+            data-id={skill.id}
+            skill={{
+              name: skill.name,
+              icon: skill.icon,
+              description: skill.description,
+            }}
           />
-          <p class="text-sm font-semibold">{skill.name}</p>
-        </div>
-      ))
-    }
-  </div>
-</div> --><!-- SECCIÓN DE HABILIDADES -->
-<div id="habilidades" class="max-w-6xl mx-auto px-4 mt-16 text-center">
-  <h3
-    class="text-2xl sm:text-3xl font-bold text-[var(--color-extra-light-blue)] mb-8"
-  >
-    Mis Habilidades
-  </h3>
-  <div
-    class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6"
-  >
-    <!-- Habilidad 1: HTML5 -->
-    <div class="skill-card">
-      <div class="skill-card-inner">
-        <div class="skill-card-front">
-          <i class="fab fa-html5"></i>
-          <p class="font-semibold text-lg">HTML5</p>
-        </div>
-        <div class="skill-card-back">
-          <p>
-            El esqueleto de la web. Estructuro contenido de manera semántica.
-          </p>
-        </div>
-      </div>
-    </div>
-    <!-- Habilidad 2: CSS3 -->
-    <div class="skill-card">
-      <div class="skill-card-inner">
-        <div class="skill-card-front">
-          <i class="fab fa-css3-alt"></i>
-          <p class="font-semibold text-lg">CSS3</p>
-        </div>
-        <div class="skill-card-back">
-          <p>Doy vida y estilo a las interfaces. Conozco SASS, TailwindCSS.</p>
-        </div>
-      </div>
-    </div>
-    <!-- Habilidad 3: JavaScript -->
-    <div class="skill-card">
-      <div class="skill-card-inner">
-        <div class="skill-card-front">
-          <i class="fab fa-js"></i>
-          <p class="font-semibold text-lg">JavaScript</p>
-        </div>
-        <div class="skill-card-back">
-          <p>La lógica interactiva del frontend. Experiencia con ES6+.</p>
-        </div>
-      </div>
-    </div>
-    <!-- Habilidad 4: React -->
-    <div class="skill-card">
-      <div class="skill-card-inner">
-        <div class="skill-card-front">
-          <i class="fab fa-react"></i>
-          <p class="font-semibold text-lg">React.js</p>
-        </div>
-        <div class="skill-card-back">
-          <p>
-            Construyo interfaces de usuario modernas y escalables con React.
-          </p>
-        </div>
-      </div>
-    </div>
-    <!-- Habilidad 5: Node.js -->
-    <div class="skill-card">
-      <div class="skill-card-inner">
-        <div class="skill-card-front">
-          <i class="fab fa-node-js"></i>
-          <p class="font-semibold text-lg">Node.js</p>
-        </div>
-        <div class="skill-card-back">
-          <p>Desarrollo APIs y servicios backend con Node.js y Express.</p>
-        </div>
-      </div>
-    </div>
-    <!-- Habilidad 6: Python -->
-    <div class="skill-card">
-      <div class="skill-card-inner">
-        <div class="skill-card-front">
-          <i class="fab fa-python"></i>
-          <p class="font-semibold text-lg">Python</p>
-        </div>
-        <div class="skill-card-back">
-          <p>
-            Experiencia en scripting, automatización y frameworks como
-            Django/Flask.
-          </p>
-        </div>
-      </div>
-    </div>
-    <!-- Habilidad 7: Git -->
-    <div class="skill-card">
-      <div class="skill-card-inner">
-        <div class="skill-card-front">
-          <i class="fab fa-git-alt"></i>
-          <p class="font-semibold text-lg">Git</p>
-        </div>
-        <div class="skill-card-back">
-          <p>Control de versiones esencial para el desarrollo colaborativo.</p>
-        </div>
-      </div>
-    </div>
-    <!-- Habilidad 8: Docker (Ejemplo de otra habilidad) -->
-    <div class="skill-card">
-      <div class="skill-card-inner">
-        <div class="skill-card-front">
-          <i class="fab fa-docker"></i>
-          <p class="font-semibold text-lg">Docker</p>
-        </div>
-        <div class="skill-card-back">
-          <p>
-            Contenedores para entornos de desarrollo y despliegue consistentes.
-          </p>
-        </div>
-      </div>
-    </div>
-    <!-- Habilidad 9: SQL -->
-    <div class="skill-card">
-      <div class="skill-card-inner">
-        <div class="skill-card-front">
-          <i class="fas fa-database"></i>
-          <p class="font-semibold text-lg">SQL</p>
-        </div>
-        <div class="skill-card-back">
-          <p>Gestión de bases de datos relacionales como PostgreSQL y MySQL.</p>
-        </div>
-      </div>
-    </div>
-    <!-- Habilidad 10: Nube (AWS/Azure/GCP) -->
-    <div class="skill-card">
-      <div class="skill-card-inner">
-        <div class="skill-card-front">
-          <i class="fas fa-cloud"></i>
-          <p class="font-semibold text-lg">Cloud</p>
-        </div>
-        <div class="skill-card-back">
-          <p>Familiaridad con servicios en la nube (ej: AWS, Azure, GCP).</p>
-        </div>
-      </div>
+        ))
+      }
     </div>
   </div>
-</div>
-
-<style>
-  /* Habilidades: Efecto Flip Card */
-  .skill-card {
-    perspective: 1000px;
-    height: 150px; /* Altura fija para todas las tarjetas */
-  }
-
-  .skill-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-    border-radius: 0.5rem; /* rounded-lg */
-    background-color: var(--color-medium-dark-blue);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  }
-
-  .skill-card:hover .skill-card-inner {
-    transform: rotateY(180deg);
-  }
-
-  .skill-card-front,
-  .skill-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden; /* Safari */
-    backface-visibility: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 1rem;
-    border-radius: 0.5rem;
-  }
-
-  .skill-card-front {
-    background-color: var(--color-medium-dark-blue);
-    color: white;
-  }
-
-  .skill-card-back {
-    background-color: var(--color-blue);
-    color: white;
-    transform: rotateY(180deg);
-    font-size: 0.875rem; /* text-sm */
-  }
-
-  .skill-card-front i {
-    font-size: 3rem; /* text-5xl */
-    margin-bottom: 0.5rem;
-    color: var(--color-extra-light-blue);
-  }
-</style>
+</section>

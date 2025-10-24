@@ -1,34 +1,80 @@
 [
-  { "id": "s1", "name": "HTML5", "icon": "src/assets/images/skills/html5.svg" },
-  { "id": "s2", "name": "CSS3", "icon": "src/assets/images/skills/css3.svg" },
+  {
+    "id": "s1",
+    "name": "HTML5",
+    "icon": "skills/html5.svg",
+    "description": "El esqueleto de la web. Estructuro contenido de manera semántica."
+  },
+  {
+    "id": "s2",
+    "name": "CSS3",
+    "icon": "skills/css3.svg",
+    "description": "Doy vida y estilo a las interfaces. Conozco SASS, TailwindCSS."
+  },
   {
     "id": "s3",
     "name": "JavaScript",
-    "icon": "src/assets/images/skills/javascript.svg"
+    "icon": "skills/javascript.svg",
+    "description": "La lógica interactiva del frontend. Experiencia con ES6+."
   },
   {
     "id": "s4",
     "name": "Vue.js",
-    "icon": "src/assets/images/skills/vuejs.svg"
+    "icon": "skills/vuejs.svg",
+    "description": "Framework progresivo para construir interfaces de usuario."
   },
   {
     "id": "s5",
     "name": "Laravel",
-    "icon": "src/assets/images/skills/laravel.svg"
+    "icon": "skills/laravel.svg",
+    "description": "Framework PHP para aplicaciones web. Conozco Eloquent y Blade."
   },
   {
     "id": "s6",
     "name": "Python",
-    "icon": "src/assets/images/skills/python.svg"
+    "icon": "skills/python.svg",
+    "description": "Experiencia en scripting, automatización y frameworks como Django/Flask."
   },
   {
     "id": "s7",
     "name": "PostgreSQL",
-    "icon": "src/assets/images/skills/postgresql.svg"
+    "icon": "skills/postgresql.svg",
+    "description": "Sistema de gestión de bases de datos relacional. Conozco SQL y PL/pgSQL."
   },
   {
     "id": "s8",
     "name": "Django",
-    "icon": "src/assets/images/skills/django.svg"
+    "icon": "skills/django.svg",
+    "description": "Framework web de alto nivel para Python. Conozco Django REST Framework."
+  },
+  {
+    "id": "s9",
+    "name": "React.js",
+    "icon": "skills/react.svg",
+    "description": "Framework de JavaScript para construir interfaces de usuario. Conozco React Router y Redux."
+  },
+  {
+    "id": "s10",
+    "name": "Node.js",
+    "icon": "skills/nodejs.svg",
+    "description": "Entorno de ejecución para JavaScript en el servidor. Conozco Express y MongoDB."
+  },
+  {
+    "id": "s11",
+    "name": "Git",
+    "icon": "skills/git.svg",
+    "description": "Sistema de control de versiones. Conozco GitHub y GitLab."
+  },
+  {
+    "id": "s12",
+    "name": "Docker",
+    "icon": "skills/docker.svg",
+    "description": "Plataforma para desarrollar, enviar y ejecutar aplicaciones en contenedores."
+  },
+  {
+    "id": "s13",
+    "name": "AWS",
+    "icon": "skills/aws.svg",
+    "description": "Servicios de computación en la nube. Conozco AWS y Azure."
   }
 ]

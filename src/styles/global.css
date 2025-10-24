@@ -35,7 +35,7 @@ body {
 /* Estilos generales de secciones */
 .scroll-section {
   padding-top: 80px; /* Espacio para el header fijo */
-  min-height: 60vh;
+  min-height: 70vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -184,3 +184,56 @@ body {
 /* Footer */
 
 /* Responsive */
+
+/* Habilidades: Efecto Flip Card */
+  .skill-card {
+    perspective: 1000px;
+    height: 150px; /* Altura fija para todas las tarjetas */
+  }
+
+  .skill-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    border-radius: 0.5rem; /* rounded-lg */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .skill-card:hover .skill-card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .skill-card-front,
+  .skill-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1rem;
+    border-radius: 0.5rem;
+  }
+
+  .skill-card-back {
+    background-color: var(--color-blue);
+    /* color: white; */
+    transform: rotateY(180deg);
+    font-size: 0.875rem; /* text-sm */
+  }
+
+  .skill-card-front i {
+    font-size: 3rem; /* text-5xl */
+    margin-bottom: 0.5rem;
+    color: var(--color-extra-light-blue);
+  }
