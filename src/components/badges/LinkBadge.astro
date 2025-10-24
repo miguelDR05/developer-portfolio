@@ -1,0 +1,43 @@
+---
+interface Props {
+  href?: string;
+  bg?: string; // Ej: "bg-purple-100"
+  text?: string; // Ej: "text-purple-800"
+  border?: string; // Ej: "border-purple-400"
+  darkBg?: string; // Ej: "dark:bg-gray-800"
+  darkText?: string; // Ej: "dark:text-purple-400"
+  darkBorder?: string; // Ej: "dark:border-gray-600"
+  rounded?: string; // Ej: "rounded-sm" | "rounded-md" | ...
+}
+
+const {
+  href = "#",
+  bg = "bg-gray-100",
+  text = "text-gray-800",
+  border = "border-gray-300",
+  darkBg = "dark:bg-gray-800",
+  darkText = "dark:text-white",
+  darkBorder = "dark:border-gray-600",
+  rounded = "rounded-md", // menos redondeado que rounded-full
+  ...rest
+} = Astro.props as Props & Record<string, any>;
+
+// Nota importante (Tailwind JIT): si pasas clases dinámicas como bg-purple-100 y
+// Tailwind no las detecta, asegúrate de que existan en algún archivo o usa safelist
+// en tu configuración. En este repo ya existe "bg-purple-100" en ColorBadge.astro.
+---
+
+<a
+  href={href}
+  {...rest}
+  target={rest.target ?? "_self"}
+  rel={rest.rel}
+  role={rest.role ?? "link"}
+  class={`inline-flex items-center justify-center gap-2 px-4 py-1 text-sm font-medium transition border ${rounded} group max-w-fit focus:outline-none focus-visible:outline-none focus-visible:ring focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-yellow-500/80
+  ${bg} ${text} ${border}
+  ${darkBg} ${darkText} ${darkBorder}
+  hover:bg-gray-900 hover:border-gray-700 hover:text-white
+  dark:hover:bg-gray-100 dark:hover:border-gray-300 dark:hover:text-black`}
+>
+  <slot />
+</a>

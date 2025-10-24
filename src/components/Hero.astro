@@ -1,29 +1,94 @@
-<section id="inicio" class="scroll-section section-inicio text-white">
-  <div class="text-center p-4">
-    <h1 class="text-4xl sm:text-6xl font-extrabold text-white leading-tight">
-      Hola!👋, soy miguelDR05
-    </h1>
-    <p class="mt-4 text-xl text-gray-300">
-      Desarrollador Front-End & Analista de Sistemas Peruano 🇵🇪.
-    </p>
-    <p class="mt-2 text-gray-400 max-w-xl mx-auto">
-      Convierto ideas complejas en soluciones web eficientes, escalables y
-      centradas en el usuario.
-    </p>
-    <div class="mt-2">
-      <a class="btn primary" href="#proyectos">Ver mis Proyectos</a>
-      <a class="btn" href="#contacto">Contactar</a>
-      <a class="link" href="/CV.pdf" download>Descargar CV</a>
-    </div>
-    <div class="mt-2">
-      <a href="https://github.com/miguelDR05" target="_blank" rel="noopener"
-        >GitHub</a
-      > ·
+---
+import Badge from "@components/badges/Badge.astro";
+import SocialBadge from "@components/badges/SocialBadge.astro";
+import LinkBadge from "@components/badges/LinkBadge.astro";
+
+import MailIcon from "@components/icons/Mail.astro";
+import LinkedInIcon from "@components/icons/LinkedIn.astro";
+import GitHub from "@components/icons/Github.astro";
+import Cv from "@components/icons/Cv.astro";
+
+const personalImageAlt =
+  "Miguel Delgado Ruiz - Ingeniero de Software y Desarrollador Front-end";
+---
+
+<!-- Se borro la clase section-inicio -->
+<section
+  id="inicio"
+  class="scroll-section px-4 md:px-8 w-full mx-auto container lg:max-w-4xl md:max-w-2xl"
+>
+  <div class="max-w-xl">
+    <div class="flex gap-4 mb-4">
+      <img
+        class="rounded-full shadow-lg h-20 w-20 object-cover"
+        src="/miguelDR05.webp"
+        alt={personalImageAlt}
+      />
       <a
-        href="https://www.linkedin.com/in/tu-linkedin"
+        href="https://www.linkedin.com/in/miguel05dev"
         target="_blank"
-        rel="noopener">LinkedIn</a
+        rel="noopener"
+        class="flex items-center transition md:justify-center md:hover:scale-105"
       >
+        <Badge>Disponible para trabajar</Badge>
+      </a>
+    </div>
+    <h1
+      class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white"
+    >
+      Hey!👋, soy miguelDR05
+    </h1>
+    <p
+      class="mt-4 text-xl text-gray-800 dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300 max-w-xl mx-auto"
+    >
+      +4 años de experiencia. <strong>
+        Ingeniero de Software y Desarrollador Front-end
+      </strong>de Chiclayo, Perú. Convierto ideas complejas en aplicaciones
+      eficientes, escalables y centradas en el usuario.
+    </p>
+    <!-- Sociales -->
+    <div class="mt-8 flex flex-wrap gap-4 justify-center">
+      <SocialBadge href="#contacto">
+        <MailIcon class="size-4" />
+        Contáctame
+      </SocialBadge>
+      <SocialBadge
+        href="https://www.linkedin.com/in/miguel05dev"
+        target="_blank"
+        rel="noopener"
+      >
+        <LinkedInIcon class="size-4" />
+        LinkedIn
+      </SocialBadge>
+    </div>
+    <!-- Links de interés -->
+    <div class="mt-4 flex flex-wrap gap-4 justify-center">
+      <LinkBadge
+        href="https://github.com/miguelDR05"
+        bg="bg-purple-100"
+        text="text-purple-800"
+        border="border-purple-400"
+        rounded="rounded-md"
+        darkBg="dark:bg-gray-800"
+        darkText="dark:text-purple-300"
+        darkBorder="dark:border-purple-500/40"
+      >
+        <GitHub class="size-6" />
+        GitHub
+      </LinkBadge>
+      <LinkBadge
+        href="/CV.pdf"
+        bg="bg-yellow-100"
+        text="text-yellow-500"
+        border="border-yellow-400"
+        rounded="rounded-md"
+        darkBg="dark:bg-gray-800"
+        darkText="dark:text-yellow-300"
+        darkBorder="dark:border-yellow-500/40"
+      >
+        Ver
+        <Cv class="size-6" />
+      </LinkBadge>
     </div>
   </div>
 </section>

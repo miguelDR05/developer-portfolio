@@ -8,22 +8,17 @@ import Projects from "../components/Projects.astro";
 import Contact from "../components/Contact.astro";
 import Footer from "../components/Footer.astro";
 
-// import GeminyPage from "../components/GeminyPage.astro";
-
 import menu from "../data/menu.json";
 import projects from "../data/projects.json";
 import skills from "../data/skills.json";
 ---
 
-<!-- <GeminyPage /> -->
 <Layout title="Segundo Miguel Delgado Ruiz — Portafolio">
-  <header
-    id="main-header"
-  >
+  <header id="main-header">
     <Navbar menu={menu} />
   </header>
 
-  <main class="">
+  <main>
     <Hero />
 
     <About />

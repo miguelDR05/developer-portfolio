@@ -11,6 +11,7 @@
     "format": "prettier --write \"src/**/*.{ts,js,astro,css,md}\""
   },
   "dependencies": {
+    "@fontsource-variable/onest": "^5.2.11",
     "@tailwindcss/vite": "^4.1.15",
     "astro": "^5.14.6",
     "flowbite": "^3.1.2",
