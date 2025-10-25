@@ -1,50 +1,61 @@
 ---
+import TitleSection from "@components/TitleSection.astro";
+import Code from "@components/icons/Code.astro";
 import type { Project } from "../interfaces/Project";
 
-const { projects = [] } = Astro.props;
+const { projects = [] } = Astro.props as { projects: Array<Project> };
 ---
 
-<!-- <section id="proyectos" class="mt-20">
-  <h2 class="text-2xl font-bold text-center">Mi portafolio</h2>
-
-  <div class="mt-6">
-    <div class="my-slider">
+<section
+  id="proyectos"
+  class="scroll-section px-4 md:px-8 w-full mx-auto container lg:max-w-4xl md:max-w-2xl text-gray-700 dark:text-gray-300"
+>
+  <TitleSection> <Code /> Proyectos </TitleSection>
+  <div class="w-full">
+    <div class="my-slider flex transition-transform duration-500 ease-in-out">
       {
         projects.map((p: Project) => (
-          <div class="px-3" data-id={p.id}>
-            <article class="rounded-xl overflow-hidden card-bg">
-              <img
-                src={p.image}
-                alt={p.title}
-                class="w-full h-48 object-cover"
-                loading="lazy"
-              />
-              <div class="p-4">
-                <h3 class="font-semibold text-lg">{p.title}</h3>
-                <p class="text-[var(--muted)] mt-2">{p.description}</p>
-                <p class="text-[var(--muted)] mt-3 text-sm">
-                  {p.stack.join(" · ")}
-                </p>
-                <div class="mt-3 flex gap-3">
-                  {p.demo ? (
-                    <a href={p.demo} class="text-primary">
-                      Ver Demo
-                    </a>
-                  ) : null}
-                  {p.github ? (
-                    <a href={p.github} class="text-primary">
-                      Ver Código
-                    </a>
-                  ) : null}
-                </div>
-              </div>
-            </article>
-          </div>
+          <article
+            data-id={p.id}
+            class="carousel-item flex-shrink-0 w-full p-4"
+          >
+            <img
+              src={p.image}
+              alt={p.title}
+              class="w-full h-48 md:h-64 object-cover rounded-md shadow-lg"
+              loading="lazy"
+            />
+            <div class="text-left">
+              <h3 class="text-2xl font-bold text-gray-700 dark:text-gray-300 mb-2">{p.title}</h3>
+            </div>
+            <p class="mb-4">{p.description}</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              {p.stack.map((s: string) => (
+                <span class="bg-[var(--color-blue)] text-xs px-2 py-1 rounded">
+                  {s}
+                </span>
+              ))}
+            </div>
+            <div class="mt-3 flex gap-3">
+              {p.demo ? (
+                <a href={p.demo} class="hover:text-white font-medium flex items-center gap-2">
+                  Ver Demo <i class="fas fa-external-link-alt text-sm" />
+                </a>
+              ) : null}
+              {p.github ? (
+                <a href={p.github} class="hover:text-white font-medium flex items-center gap-2">
+                  Ver Código <i class="fas fa-code text-sm" />
+                </a>
+              ) : null}
+            </div>
+          </article>
         ))
       }
     </div>
   </div>
-</section> --><!-- Inicialización: el script importa desde src/scripts/slider-init.js --><!-- <script type="module">
+</section>
+
+<script type="module" is:inline>
   import { initSlider } from "/src/scripts/slider-init.js";
   if (typeof window !== "undefined") {
     document.addEventListener("DOMContentLoaded", () => {
@@ -52,226 +63,4 @@ const { projects = [] } = Astro.props;
       initSlider();
     });
   }
-</script> -->
-
-<!-- SECCIÓN: PROYECTOS (CARRUSEL) -->
-<section
-  id="proyectos"
-  class="scroll-section bg-[var(--color-dark-blue)] py-16 px-4"
->
-  <h2
-    class="text-3xl sm:text-4xl font-bold text-[var(--color-extra-light-blue)] mb-12"
-  >
-    Mis Proyectos
-  </h2>
-
-  <div class="carousel-container relative w-full px-8">
-    <!-- Contenedor de Proyectos -->
-    <div class="overflow-hidden relative rounded-lg shadow-xl">
-      <div
-        id="carousel-track"
-        class="flex transition-transform duration-500 ease-in-out"
-      >
-        <!-- Proyecto 1 -->
-        <div class="carousel-item flex-shrink-0 w-full p-4">
-          <div
-            class="rounded-lg shadow-xl overflow-hidden flex flex-col md:flex-row items-center p-6 gap-6"
-          >
-            <img
-              src="src/assets/images/projects/developer-portfolio.jpg"
-              alt="Proyecto 1"
-              class="w-full md:w-1/2 h-48 md:h-64 object-cover rounded-md shadow-lg"
-            />
-            <div class="text-left md:w-1/2">
-              <h3 class="text-2xl font-bold text-white mb-2">
-                Proyecto Portafolio Web
-              </h3>
-              <p class="text-gray-300 mb-4">
-                Un ejemplo de un portafolio personal moderno y responsivo,
-                destacando habilidades y proyectos. Construido con HTML, CSS
-                (TailwindCSS) y JavaScript.
-              </p>
-              <div class="flex flex-wrap gap-2 mb-4">
-                <span class="bg-[var(--color-blue)] text-xs px-2 py-1 rounded"
-                  >HTML</span
-                >
-                <span class="bg-[var(--color-blue)] text-xs px-2 py-1 rounded"
-                  >CSS</span
-                >
-                <span class="bg-[var(--color-blue)] text-xs px-2 py-1 rounded"
-                  >JavaScript</span
-                >
-                <span class="bg-[var(--color-blue)] text-xs px-2 py-1 rounded"
-                  >TailwindCSS</span
-                >
-              </div>
-              <a
-                href="#"
-                class="text-[var(--color-extra-light-blue)] hover:text-white font-medium flex items-center gap-2"
-              >
-                Ver Proyecto <i class="fas fa-external-link-alt text-sm"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Proyecto 2 -->
-        <div class="carousel-item flex-shrink-0 w-full p-4">
-          <div
-            class="bg-[var(--color-medium-dark-blue)] rounded-lg shadow-xl overflow-hidden flex flex-col md:flex-row items-center p-6 gap-6"
-          >
-            <img
-              src="src/assets/images/projects/developer-portfolio.jpg"
-              alt="Proyecto 2"
-              class="w-full md:w-1/2 h-48 md:h-64 object-cover rounded-md shadow-lg"
-            />
-            <div class="text-left md:w-1/2">
-              <h3 class="text-2xl font-bold text-white mb-2">
-                Aplicación de Tareas con React
-              </h3>
-              <p class="text-gray-300 mb-4">
-                Una aplicación interactiva para gestionar tareas diarias, con
-                funcionalidades de añadir, editar y eliminar. Implementado con
-                React y Redux.
-              </p>
-              <div class="flex flex-wrap gap-2 mb-4">
-                <span class="bg-[var(--color-blue)] text-xs px-2 py-1 rounded"
-                  >React</span
-                >
-                <span class="bg-[var(--color-blue)] text-xs px-2 py-1 rounded"
-                  >Redux</span
-                >
-                <span class="bg-[var(--color-blue)] text-xs px-2 py-1 rounded"
-                  >Node.js</span
-                >
-              </div>
-              <a
-                href="#"
-                class="text-[var(--color-extra-light-blue)] hover:text-white font-medium flex items-center gap-2"
-              >
-                Ver Proyecto <i class="fas fa-external-link-alt text-sm"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Proyecto 3 -->
-        <div class="carousel-item flex-shrink-0 w-full p-4">
-          <div
-            class="bg-[var(--color-medium-dark-blue)] rounded-lg shadow-xl overflow-hidden flex flex-col md:flex-row items-center p-6 gap-6"
-          >
-            <img
-              src="src/assets/images/projects/developer-portfolio.jpg"
-              alt="Proyecto 3"
-              class="w-full md:w-1/2 h-48 md:h-64 object-cover rounded-md shadow-lg"
-            />
-            <div class="text-left md:w-1/2">
-              <h3 class="text-2xl font-bold text-white mb-2">
-                Plataforma E-commerce
-              </h3>
-              <p class="text-gray-300 mb-4">
-                Desarrollo de una tienda en línea completa, incluyendo carrito
-                de compras, gestión de productos y pasarela de pagos. Backend
-                con Python/Django.
-              </p>
-              <div class="flex flex-wrap gap-2 mb-4">
-                <span class="bg-[var(--color-blue)] text-xs px-2 py-1 rounded"
-                  >Python</span
-                >
-                <span class="bg-[var(--color-blue)] text-xs px-2 py-1 rounded"
-                  >Django</span
-                >
-                <span class="bg-[var(--color-blue)] text-xs px-2 py-1 rounded"
-                  >PostgreSQL</span
-                >
-              </div>
-              <a
-                href="#"
-                class="text-[var(--color-extra-light-blue)] hover:text-white font-medium flex items-center gap-2"
-              >
-                Ver Proyecto <i class="fas fa-external-link-alt text-sm"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Añade más proyectos aquí si lo deseas -->
-      </div>
-    </div>
-
-    <!-- Botones de navegación del carrusel -->
-    <button
-      id="carousel-prev"
-      class="carousel-button carousel-button-prev hidden sm:block"
-      ><i class="fas fa-chevron-left"></i></button
-    >
-    <button
-      id="carousel-next"
-      class="carousel-button carousel-button-next hidden sm:block"
-      ><i class="fas fa-chevron-right"></i></button
-    >
-
-    <!-- Dots de paginación del carrusel -->
-    <div id="carousel-dots" class="carousel-dots">
-      <!-- Los dots se generarán dinámicamente con JS -->
-    </div>
-  </div>
-</section>
-
-<script type="module" src="src/scripts/carousel.js"></script>
-
-<style>
-  /* Estilos del carrusel de proyectos */
-  .carousel-container {
-    position: relative;
-    max-width: 900px; /* Ancho máximo del carrusel */
-    margin: 0 auto;
-  }
-
-  /* NO ocultar items - el transform los mueve fuera de vista */
-  .carousel-item {
-    min-width: 100%; /* Asegurar que cada item ocupe el 100% */
-  }
-
-  .carousel-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    z-index: 10;
-    font-size: 1.5rem;
-    border-radius: 50%;
-    transition: background-color 0.3s;
-  }
-  .carousel-button:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-  }
-  .carousel-button-prev {
-    left: -40px;
-  } /* Ajuste de posición */
-  .carousel-button-next {
-    right: -40px;
-  } /* Ajuste de posición */
-
-  .carousel-dots {
-    text-align: center;
-    margin-top: 20px;
-  }
-  .dot {
-    height: 12px;
-    width: 12px;
-    margin: 0 5px;
-    background-color: var(--color-light-blue);
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-    cursor: pointer;
-  }
-  .dot.active {
-    background-color: var(--color-extra-light-blue);
-  }
-</style>
+</script>

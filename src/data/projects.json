@@ -6,7 +6,7 @@
     "stack": ["Laravel", "Vue.js", "MySQL"],
     "github": "https://github.com/miguelDR05/inventory-manager",
     "demo": "",
-    "image": "src/assets/images/projects/inventory-manager.jpg"
+    "image": "projects/inventory-manager.jpg"
   },
   {
     "id": "p2",
@@ -15,7 +15,7 @@
     "stack": ["Astro", "JavaScript", "CSS"],
     "github": "https://github.com/miguelDR05/developer-portfolio",
     "demo": "",
-    "image": "src/assets/images/projects/developer-portfolio.jpg"
+    "image": "projects/developer-portfolio.jpg"
   },
   {
     "id": "p3",
@@ -24,7 +24,7 @@
     "stack": ["Laravel", "Vue.js", "MySQL"],
     "github": "https://github.com/miguelDR05/inventory-manager",
     "demo": "",
-    "image": "src/assets/images/projects/inventory-manager.jpg"
+    "image": "projects/inventory-manager.jpg"
   },
   {
     "id": "p4",
@@ -33,7 +33,7 @@
     "stack": ["Astro", "JavaScript", "CSS"],
     "github": "https://github.com/miguelDR05/developer-portfolio",
     "demo": "",
-    "image": "src/assets/images/projects/developer-portfolio.jpg"
+    "image": "projects/developer-portfolio.jpg"
   },
   {
     "id": "p5",
@@ -42,7 +42,7 @@
     "stack": ["Laravel", "Vue.js", "MySQL"],
     "github": "https://github.com/miguelDR05/inventory-manager",
     "demo": "",
-    "image": "src/assets/images/projects/inventory-manager.jpg"
+    "image": "projects/inventory-manager.jpg"
   },
   {
     "id": "p6",
@@ -51,7 +51,7 @@
     "stack": ["Astro", "JavaScript", "CSS"],
     "github": "https://github.com/miguelDR05/developer-portfolio",
     "demo": "",
-    "image": "src/assets/images/projects/developer-portfolio.jpg"
+    "image": "projects/developer-portfolio.jpg"
   }
 
 ]

@@ -19,11 +19,6 @@
 * {
   box-sizing: border-box;
 }
-html,
-body {
-  /* background-color: var(--color-dark-blue); */
-  /* color: white; */
-}
 
 /* Container */
 .container {
@@ -43,32 +38,6 @@ body {
   /* text-align: center; */
   position: relative;
   overflow: hidden; /* Para las imágenes de fondo */
-}
-
-/* Estilo para la imagen de fondo de Inicio */
-.section-inicio {
-  background-size: cover;
-  background-position: center;
-  transition: background-image 1s ease-in-out;
-  /* Placeholder para la imagen de fondo */
-  background-image: url("src/assets/images/background-image-2.jpg");
-}
-
-/* Overlay para la imagen de fondo */
-.section-inicio::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(18, 39, 75, 0.7); /* color-dark-blue con opacidad */
-  z-index: 1;
-}
-
-.section-inicio > * {
-  position: relative;
-  z-index: 2;
 }
 
 /* Card background */
@@ -193,7 +162,7 @@ body {
 
   .skill-card-inner {
     position: relative;
-    width: 100%;
+    width: 200px;
     height: 100%;
     text-align: center;
     transition: transform 0.6s;
@@ -213,7 +182,7 @@ body {
   .skill-card-front,
   .skill-card-back {
     position: absolute;
-    width: 100%;
+    width: 200px;
     height: 100%;
     -webkit-backface-visibility: hidden; /* Safari */
     backface-visibility: hidden;
