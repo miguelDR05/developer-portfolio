@@ -10,7 +10,7 @@
 
 ## 🖼️ Preview
 
-[![Vista Previa de mi Portafolio](https://raw.githubusercontent.com/migueldrdev/developer-portfolio/main/public/preview.jpg)](https://migueldrdev.dev/)
+[![Vista Previa de mi Portafolio](https://raw.githubusercontent.com/migueldrdev/developer-portfolio/main/public/preview.jpg)](https://migueldr.dev/)
 
 ## 🚀 Key Features
 
